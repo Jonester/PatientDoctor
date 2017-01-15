@@ -13,8 +13,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Doctor *doctor = [Doctor new];
-        Patient *patient = [[Patient alloc]initWithName:@"Joe" age:32 hasHealthCard:YES];
+        Doctor *doctor = [[Doctor alloc]initWithName:@"Dr. Jones" specialization:@"Family Doctor"];
+        Patient *patient = [[Patient alloc]initWithName:@"Joe Burgerboy" age:32 hasHealthCard:YES];
         
         [patient visitDoctor:doctor];
         

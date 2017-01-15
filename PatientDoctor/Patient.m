@@ -17,20 +17,18 @@
     if (self) {
         _name = name;
         _age = age;
-        _hasHealthCard = YES;
+        _hasHealthCard = hasHealthCard;
     }
     return self;
 }
 
 - (void)visitDoctor: (Doctor *)doctor {
-    NSLog(@"%@", [doctor doctorAppointment:self]);
-    
-}
-
-- (void)requestMedication: (Doctor *)doctor withSymptoms: (NSString *) symptoms {
-    NSArray *symptomArray = @[@"Headache", @"Stress", @"Fatigue", @"Slight Cough"];
-    NSString *symptom = symptomArray[arc4random_uniform(4)];
-    NSLog(@"%@ \n\n%@", symptom, [doctor providePrescription:self symptoms:symptom]);
+    if([doctor doctorAppointment:self]) {
+        NSArray *symptomArray = @[@"Headache", @"Stress", @"Fatigue", @"Slight Cough"];
+        NSString *symptom = symptomArray[arc4random_uniform(4)];
+        [doctor providePrescription:self symptoms:symptom];
+        NSLog(@"Patient symptom: %@", symptom);
+    }
 }
 
 @end

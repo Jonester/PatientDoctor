@@ -10,5 +10,14 @@
 
 @implementation Prescription
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _medication = [NSString new];
+        _doctorName = [NSString new];
+    }
+    return self;
+}
 
 @end

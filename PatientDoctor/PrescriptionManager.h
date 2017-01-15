@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 @class Prescription;
 @class Patient;
+@class Doctor;
 
 @interface PrescriptionManager : NSObject
 
 @property (nonatomic, strong) NSMutableSet <Prescription*> *prescriptionSet;
 @property (nonatomic, assign) BOOL isPrescriptionHistoryApproved;
 
--(NSMutableSet *)providePrescriptionHistory: (Patient *)patient doctorID: (Doctor *)doctor
+-(NSMutableSet *)providePrescriptionHistory: (Patient *)patient doctorID: (Doctor *)doctor;
 
 @end

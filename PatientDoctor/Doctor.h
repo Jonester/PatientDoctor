@@ -17,7 +17,7 @@
 @property (nonatomic, readonly) Prescription *prescription;
 
 - (instancetype)initWithName: (NSString *)name specialization: (NSString *) specialization;
-- (NSString *)doctorAppointment: (Patient *) patient;
+- (BOOL)doctorAppointment: (Patient *) patient;
 - (Prescription *)providePrescription: (Patient *)patient symptoms: (NSString *)symptoms;
 
 @end

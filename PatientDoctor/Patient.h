@@ -16,7 +16,6 @@
 @property (nonatomic, assign) BOOL hasHealthCard;
 
 - (instancetype)initWithName: (NSString *) name age:(NSInteger) age hasHealthCard:(BOOL) hasHealthCard;
-- (void)requestMedication: (Doctor *)doctor withSymptoms: (NSString *) symptoms;
 - (void)visitDoctor: (Doctor *)doctor;
 
 @end

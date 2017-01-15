@@ -8,10 +8,22 @@
 
 #import "PrescriptionManager.h"
 #import "Patient.h"
+#import "Doctor.h"
 
 @implementation PrescriptionManager
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _isPrescriptionHistoryApproved = YES;
+        _prescriptionSet = [NSMutableSet new];
+    };
+    return self;
+}
+
 -(NSMutableSet *)providePrescriptionHistory: (Patient *)patient doctorID: (Doctor *)doctor {
+    NSLog(@"Patient: %@'s prescription history has been provided to %@.", patient.name, doctor.name);
     return self.prescriptionSet;
 }
 
